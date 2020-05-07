@@ -1,23 +1,22 @@
 <template>
   <div class="container">
-    <Header/>
-    <Cover/>
-    <Video/>
+    <Header />
+    <Cover />
+    <Video />
   </div>
 </template>
 
 <script>
-  import Header from '@/components/Header';
-  import Cover from '@/components/Cover';
-  import Video from '@/components/Video';
-  export default {
-    components: {
-      Header,
-      Cover,
-      Video,
-    }
-  };
-
+import Header from '@/components/Header';
+import Cover from '@/components/Cover';
+import Video from '@/components/Video';
+export default {
+  components: {
+    Header,
+    Cover,
+    Video,
+  },
+};
 </script>
 
 <style>
