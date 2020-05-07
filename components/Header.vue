@@ -6,10 +6,8 @@
         Проект Благотворительного Фонда Константина Хабенского
       </h2>
       <nav class="header__menu">
-        <nuxt-link to="/" class="header__menu-link" >Главная</nuxt-link>
-        <nuxt-link to="stories" class="header__menu-link"
-          >Истроии</nuxt-link
-        >
+        <nuxt-link to="/" class="header__menu-link">Главная</nuxt-link>
+        <nuxt-link to="stories" class="header__menu-link">Истроии</nuxt-link>
         <nuxt-link to="makeStory" class="header__menu-link"
           >Рассказать историю</nuxt-link
         >
@@ -19,11 +17,11 @@
 </template>
 
 <script>
-import Panel from '@/components/Panel'
+import Panel from '@/components/Panel';
 export default {
   components: {
-    'panel': Panel
-  }
+    panel: Panel,
+  },
 };
 </script>
 

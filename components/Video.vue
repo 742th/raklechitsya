@@ -1,4 +1,5 @@
-// TODO: 1)Заменить ссылку Металлики на нужную! 2)Добавить ссылку на Ютуб канал под видео 3)Кнопки со стрелками??
+// TODO: 1)Заменить ссылку Металлики на нужную! 2)Добавить ссылку на Ютуб канал
+под видео 3)Кнопки со стрелками??
 <template>
   <div class="video">
     <panel>
@@ -8,8 +9,8 @@
         >
         <qoute-paragraph>
           Есть вещи, которые не лечатся. Вещи ставшие частью нашего «я», фобии,
-          страхи. Но это точно не рак. Рак лечится. Лучшее доказательство — люди с
-          их историями.
+          страхи. Но это точно не рак. Рак лечится. Лучшее доказательство — люди
+          с их историями.
         </qoute-paragraph>
         <div class="buttons">
           <button-arrow-left />
@@ -34,15 +35,15 @@ import Title from '@/components/UI/Title';
 import Paragraph from '@/components/UI/QuoteParagraph';
 import ButtonArrow from '@/components/UI/ButtonArrow';
 import Banner from '@/components/UI/Banner';
-import Panel from '@/components/Panel'
+import Panel from '@/components/Panel';
 export default {
   components: {
     videoIframe,
     'quote-title': Title,
     'qoute-paragraph': Paragraph,
     'button-arrow-left': ButtonArrow,
-    'banner': Banner,
-    'panel': Panel,
+    banner: Banner,
+    panel: Panel,
   },
   data() {
     return {
