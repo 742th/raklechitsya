@@ -4,9 +4,9 @@
       Проект Благотворительного Фонда Константина Хабенского
     </h2>
     <nav class="header__menu">
-      <a class="header__menu-link" href="">Главная</a>
-      <a class="header__menu-link" href="">Истроии</a>
-      <a class="header__menu-link" href="">Рассказать историю</a>
+      <nuxt-link to="/" class="header__menu-link" href="">Главная</nuxt-link>
+      <nuxt-link to="stories" class="header__menu-link" href="">Истроии</nuxt-link>
+      <nuxt-link to="makeStory" class="header__menu-link" href="">Рассказать историю</nuxt-link>
     </nav>
   </header>
 </template>
@@ -25,7 +25,6 @@ export default {};
   margin: 0px;
 }
 .header__title {
-  font-family: Inter, Arial, sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -35,7 +34,6 @@ export default {};
   text-align: left;
 }
 .header__menu-link {
-  font-family: Inter, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;

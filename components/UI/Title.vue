@@ -16,7 +16,6 @@ export default {};
 }
 
 .title-text {
-  font-family: Inter;
   font-style: normal;
   font-weight: 600;
   font-size: 32px;

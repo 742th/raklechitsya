@@ -13,11 +13,9 @@ export default {};
   display: flex;
   max-width: 340px;
   text-align: left;
-  margin: 30px auto 0 0;
-  position: relative;
+  margin: 32px auto 0 0;
 }
 .quote__paragraph {
-  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
