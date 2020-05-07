@@ -1,3 +1,4 @@
+// TODO: Добавить резины!
 <template>
   <div class="video-iframe">
     <iframe
@@ -17,7 +18,8 @@ export default {
 <style scoped>
 .video-iframe {
   width: 867px;
-  height: 450px;
+  min-height: 450px;
+  height: 100%;
 }
 
 iframe {
