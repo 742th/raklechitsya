@@ -1,8 +1,10 @@
 <template>
   <div class="Card">
+    <nuxt-link to="/" class="card__link">
     <img src="https://media.kg-portal.ru/images/gentlemen/gentlemen_11.jpg" alt="Фотография героя рассказа" class="card__photo">
     <h3 class="card__title">Владимир Тен</h3>
     <p class="card__text">Я всегда читаю книги с конца, - и это не лечится, в отличие от рака.</p>
+    </nuxt-link>
   </div>
 </template>
 
@@ -26,6 +28,7 @@
     line-height: 22px;
     margin: 20px 0 14px 0;
     text-align: left;
+    color: black;
   }
 
   .card__text {
@@ -35,5 +38,10 @@
     color: #666666;
     text-align: left;
     margin: 0;
+  }
+
+  .card__link {
+    text-decoration: none;
+    cursor: pointer;
   }
 </style>

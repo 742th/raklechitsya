@@ -38,7 +38,7 @@
   line-height: 36px;
   max-width: 413px;
   text-align: left;
-  margin: 0 0 70px 60px;
+  margin: 100px 0 70px 60px;
 }
 
 .cards__container {
