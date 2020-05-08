@@ -1,16 +1,26 @@
 <template>
-  <div class="container"></div>
+  <div class="container">
+    <Cover />
+    <Video />
+  </div>
 </template>
 
-<script></script>
+<script>
+import Cover from '@/components/Cover';
+import Video from '@/components/Video';
+export default {
+  components: {
+    Cover,
+    Video,
+  },
+};
+</script>
 
 <style>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
+  flex-direction: column;
 }
 </style>
