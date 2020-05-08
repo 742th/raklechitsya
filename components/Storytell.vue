@@ -71,7 +71,7 @@ export default {
 .story {
   margin: 100px auto 0;
   background-color: #f7f7f7;
-  padding-top: 100px;
+  padding: 100px 0;
 }
 
 .story__from-quote {
