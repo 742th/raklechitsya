@@ -3,14 +3,20 @@
     <Header />
 
     <nuxt />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '@/components/blocks/Header';
+import Popup from '@/components/Popup';
+import Footer from '@/components/Footer';
+
 export default {
   components: {
     Header,
+    Popup,
+    Footer,
   },
 };
 </script>
