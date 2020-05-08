@@ -24,7 +24,7 @@ export default {};
 
 .button__arrow:hover {
   cursor: pointer;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
 }
 
 .arrow {

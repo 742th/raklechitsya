@@ -1,6 +1,6 @@
 <template>
   <div class="cover">
-    <h2 class="cover__title">#РАКЛЕЧИТСЯ</h2>
+    <h1 class="cover__title">#РАКЛЕЧИТСЯ</h1>
     <button class="cover__arrow"></button>
   </div>
 </template>

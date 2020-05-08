@@ -1,6 +1,8 @@
 <template>
   <div class="paragraph">
-    <p class="quote__paragraph"><slot></slot></p>
+    <p class="quote__paragraph">
+      <slot></slot>
+    </p>
   </div>
 </template>
 
@@ -10,7 +12,6 @@ export default {};
 
 <style scoped>
 .paragraph {
-  display: flex;
   max-width: 340px;
   text-align: left;
   margin: 32px auto 0 0;

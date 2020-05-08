@@ -18,6 +18,7 @@
         <BtnStory />
       </panel>
     </section>
+    <Story />
   </div>
 </template>
 
@@ -27,6 +28,7 @@ import Card from '@/components/Card';
 import BtnStory from '@/components/UI/BtnStory';
 import Panel from '@/components/Panel';
 import Video from '@/components/Video';
+import Story from '@/components/Storytell';
 
 export default {
   components: {
@@ -35,6 +37,7 @@ export default {
     BtnStory,
     Video,
     Cover,
+    Story,
   },
 };
 </script>

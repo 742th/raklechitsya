@@ -4,8 +4,8 @@
     <iframe
       :src="url"
       allowfullscreen
-      allow="accelerometer; autoplay; ecrypted-media; gyroscope; picture-in-picture"
-    ></iframe>
+      allow="accelerometer; autoplay; ecrypted-media; gyroscope; picture-in-picture">
+    </iframe>
   </div>
 </template>
 

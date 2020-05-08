@@ -14,8 +14,10 @@ export default {};
   height: 82px;
   background: #fbfbfb;
   border: none;
+  font-family: Inter, Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
+  padding: 0;
 }
 
 .button-story:hover {

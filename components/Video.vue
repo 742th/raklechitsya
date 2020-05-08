@@ -18,9 +18,11 @@
       </div>
       <div class="video_container">
         <videoIframe class="video-iframe" :url="link" />
-        <span class="video-frame_subtitle"
-          >Все видео вы можете найте на нашем
-          <a class="video-frame_link" href="https://www.youtube.com/channel/UCcxMSzN1R4JfW1vLu3swCaQ">YouTube канале.</a>
+        <span class="video-frame_subtitle">
+          Все видео вы можете найте на нашем
+          <a class="video-frame_link"
+          href="https://www.youtube.com/channel/UCcxMSzN1R4JfW1vLu3swCaQ">
+          YouTube канале.</a>
         </span>
       </div>
       <banner>И В ОТЛИЧИЕ ОТ РАКА,</banner>
@@ -102,6 +104,6 @@ export default {
 
 .video-frame_link {
   text-decoration: underline;
-  color: #666666
+  color: #666666;
 }
 </style>
