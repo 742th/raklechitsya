@@ -14,7 +14,7 @@
           <a href="#" class="footer__social-link">Инстаграме</a>
           <p class="footer__text">и</p>
           <a href="#" class="footer__social-link">Youtube</a>
-          <p class="footer__add">Поделитесь</p>
+          <p class="footer__add">Поделитесь <span>&#129125;</span></p>
         </div>
       </div>
       <div class="copyright">
@@ -95,6 +95,7 @@ export default {
 .footer__add {
   margin-top: 44px;
 }
+/*
 .footer__add::after {
   content: ' ';
   border: 0.5px solid black;
@@ -103,5 +104,5 @@ export default {
   padding: 5px;
   margin-left: 5px;
   transform: rotate(-90deg);
-}
+}*/
 </style>
