@@ -5,29 +5,26 @@
 </template>
 
 <script>
-  export default {
-
-  }
+export default {};
 </script>
 
 <style scoped>
-  .button-story {
-    width: calc(100vw - 60px*2);
-    height: 82px;
-    background: #FBFBFB;
-    border: none;
-    font-size: 16px;
-    line-height: 20px;
-  }
+.button-story {
+  width: 100%;
+  height: 82px;
+  background: #fbfbfb;
+  border: none;
+  font-size: 16px;
+  line-height: 20px;
+}
 
-  .button-story:hover {
-    background: #F8F8F8;
-    cursor: pointer;
-  }
+.button-story:hover {
+  background: #f8f8f8;
+  cursor: pointer;
+}
 
-  .button-story_link {
-    text-decoration: none;
-    color: black;
-  }
-
+.button-story_link {
+  text-decoration: none;
+  color: black;
+}
 </style>
