@@ -1,17 +1,17 @@
-.<template>
-    <button class="BtnStory">
-      <nuxt-link to="/" class="BtnStory__link">Больше статей</nuxt-link>
-      </button>
+<template>
+  <button class="button-story">
+    <nuxt-link to="/" class="button-story_link">Больше статей</nuxt-link>
+  </button>
 </template>
 
 <script>
   export default {
-    
+
   }
 </script>
 
 <style scoped>
-  .BtnStory {
+  .button-story {
     width: calc(100vw - 60px*2);
     height: 82px;
     background: #FBFBFB;
@@ -20,14 +20,14 @@
     line-height: 20px;
   }
 
-  .BtnStory:hover {
+  .button-story:hover {
     background: #F8F8F8;
     cursor: pointer;
   }
 
-  .BtnStory__link {
+  .button-story_link {
     text-decoration: none;
     color: black;
   }
-  
+
 </style>
