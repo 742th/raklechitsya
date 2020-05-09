@@ -15,12 +15,12 @@ export default {};
   max-width: 340px;
   text-align: left;
   margin: 32px auto 0 0;
+  color: #666666;
 }
 .quote__paragraph {
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
   line-height: 22px;
-  color: #666666;
 }
 </style>

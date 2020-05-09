@@ -19,16 +19,18 @@
       </panel>
     </section>
     <Story />
+    <About />
   </div>
 </template>
 
 <script>
-import Cover from '@/components/Cover';
+import Cover from '@/components/blocks/Cover';
 import Card from '@/components/Card';
 import BtnStory from '@/components/UI/BtnStory';
 import Panel from '@/components/Panel';
-import Video from '@/components/Video';
-import Story from '@/components/Storytell';
+import Video from '@/components/blocks/Video';
+import Story from '@/components/blocks/Storytell';
+import About from '@/components/blocks/About';
 
 export default {
   components: {
@@ -38,6 +40,7 @@ export default {
     Video,
     Cover,
     Story,
+    About,
   },
 };
 </script>

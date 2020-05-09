@@ -1,8 +1,8 @@
 <template>
-  <div class="cover">
+  <section class="cover">
     <h1 class="cover__title">#РАКЛЕЧИТСЯ</h1>
     <button class="cover__arrow"></button>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -20,7 +20,6 @@ export default {};
 }
 
 .cover__title {
-  font-family: Inter, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 92px;

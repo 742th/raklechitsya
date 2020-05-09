@@ -1,5 +1,5 @@
 <template>
-  <div class="story">
+  <section class="story">
     <panel>
       <div class="story__paragraph">
         <block-title>Расскажите свою историю</block-title>
@@ -35,7 +35,7 @@
         >
       </div>
     </panel>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -76,6 +76,7 @@ export default {
 
 .story__from-quote {
   max-width: 610px;
+  min-height: 88px;
   margin: 105px auto 78px 0px;
 }
 
