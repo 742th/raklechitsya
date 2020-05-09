@@ -6,37 +6,47 @@
         <div class="about__paragraph">
           <block-title>О проекте</block-title>
           <Quote class="about__quote"
-            >Этот проект был создан благотворительным фондом Константина Хабенского.
+            >Этот проект был создан благотворительным фондом Константина
+            Хабенского.
           </Quote>
         </div>
         <div class="about__buttons-block">
-          <button-from class="buttons-block" @btnClick="oneVar" :theme="'default'"
+          <button-from
+            class="buttons-block"
+            @btnClick="oneVar"
+            :theme="'default'"
             >Рак Лечится</button-from
           >
-          <button-from class="buttons-block" @btnClick="twoVar" :theme="'default'"
+          <button-from
+            class="buttons-block"
+            @btnClick="twoVar"
+            :theme="'default'"
             >Фонд Хабенского</button-from
           >
         </div>
         <div class="about__form">
           <Quote v-if="show" class="about__from-quote"
-            >Благотворительный Фонд Константина Хабенского с 2008 года помогает детям
-            с онкологическими и другими тяжелыми заболеваниями головного мозга.
-            Фонд не только поддерживает семью заболевшего ребенка в самый сложный момент,
-            оплачивая обследования, лечение и медицинские препараты, но и в целом меняет
-            систему оказания помощи детям с опухолями мозга в России.
+            >Благотворительный Фонд Константина Хабенского с 2008 года помогает
+            детям с онкологическими и другими тяжелыми заболеваниями головного
+            мозга. Фонд не только поддерживает семью заболевшего ребенка в самый
+            сложный момент, оплачивая обследования, лечение и медицинские
+            препараты, но и в целом меняет систему оказания помощи детям с
+            опухолями мозга в России.
           </Quote>
           <div v-else>
             <Quote class="about__from-quote"
-              >Есть вещи, которые не лечатся. Особенности характера, страстные увлечения,
-              привычки, ставшие частью нашего «я», фобии, которые мы приобрели в детстве.
-              Список можно продолжать до бесконечности, но одна болезнь в него точно не войдет.
-              Эта болезнь — рак. Рак лечится, и лучшее доказательство — люди с их неизлечимыми
+              >Есть вещи, которые не лечатся. Особенности характера, страстные
+              увлечения, привычки, ставшие частью нашего «я», фобии, которые мы
+              приобрели в детстве. Список можно продолжать до бесконечности, но
+              одна болезнь в него точно не войдет. Эта болезнь — рак. Рак
+              лечится, и лучшее доказательство — люди с их неизлечимыми
               особенностями, которые сумели победить рак.
             </Quote>
-            <Quote  class="about__from-quote-add"
-              >Рак лечится — проект Благотворительного Фонда Константина Хабенского и Leo Burnett
-              Moscow. С его помощью мы надеемся изменить отношение людей к раку и заставить каждого
-              поверить: онкологическое заболевание — это не приговор.
+            <Quote class="about__from-quote-add"
+              >Рак лечится — проект Благотворительного Фонда Константина
+              Хабенского и Leo Burnett Moscow. С его помощью мы надеемся
+              изменить отношение людей к раку и заставить каждого поверить:
+              онкологическое заболевание — это не приговор.
             </Quote>
           </div>
         </div>
@@ -46,41 +56,41 @@
 </template>
 
 <script>
-  import Title from '@/components/UI/Title';
-  import Quote from '@/components/UI/QuoteParagraph';
-  import Panel from '@/components/Panel';
-  import ButtonForm from '@/components/UI/ButtonForm';
+import Title from '@/components/UI/Title';
+import Quote from '@/components/UI/QuoteParagraph';
+import Panel from '@/components/Panel';
+import ButtonForm from '@/components/UI/ButtonForm';
 
-  export default {
-    components: {
-      Quote,
-      'block-title': Title,
-      panel: Panel,
-      'button-from': ButtonForm,
+export default {
+  components: {
+    Quote,
+    'block-title': Title,
+    panel: Panel,
+    'button-from': ButtonForm,
+  },
+  methods: {
+    oneVar() {
+      this.show = true;
+      this.theme = '-active';
     },
-    methods: {
-      oneVar() {
-        this.show = true;
-        this.theme = '-active';
-      },
-      twoVar() {
-        this.show = false;
-      },
+    twoVar() {
+      this.show = false;
     },
-    data() {
-      return {
-        show: true,
-      };
-    },
-    }
+  },
+  data() {
+    return {
+      show: true,
+    };
+  },
+};
 </script>
 
 <style scoped>
 .about {
   margin: 100px auto 0;
-  background-color: #613A93;
+  background-color: #613a93;
   padding: 100px 0;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .about__paragraph {
@@ -90,18 +100,18 @@
 .about__from-quote {
   max-width: 640px;
   margin: 0 auto 20px 0px;
-  color: #DEDEDE;
+  color: #dedede;
 }
 
 .about__from-quote-add {
   max-width: 600px;
   margin: 0;
-  color: #DEDEDE;
+  color: #dedede;
 }
 
 .about__quote {
   max-width: 340px;
-  color: #DEDEDE;
+  color: #dedede;
 }
 
 .about__form {
