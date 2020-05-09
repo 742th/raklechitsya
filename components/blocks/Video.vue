@@ -1,6 +1,6 @@
 // TODO: 1)Кнопки со стрелками??
 <template>
-  <div class="video">
+  <section class="video">
     <panel>
       <div class="quote">
         <quote-title class="quote__title"
@@ -30,7 +30,7 @@
       </div>
       <banner>И В ОТЛИЧИЕ ОТ РАКА,</banner>
     </panel>
-  </div>
+  </section>
 </template>
 
 <script>
