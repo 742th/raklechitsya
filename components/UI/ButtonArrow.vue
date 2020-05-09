@@ -21,6 +21,12 @@ export default {};
   border: none;
   outline: none;
 }
+
+.button__arrow:hover {
+  cursor: pointer;
+  background-color: #f4f4f4;
+}
+
 .arrow {
   width: 20px;
   height: 20px;

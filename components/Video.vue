@@ -1,5 +1,4 @@
-// TODO: 1)Заменить ссылку Металлики на нужную! 2)Добавить ссылку на Ютуб канал
-под видео 3)Кнопки со стрелками??
+// TODO: 1)Кнопки со стрелками??
 <template>
   <div class="video">
     <panel>
@@ -19,9 +18,14 @@
       </div>
       <div class="video_container">
         <videoIframe class="video-iframe" :url="link" />
-        <span class="video-frame_subtitle"
-          >Все видео вы можете найте на нашем
-          <a class="video-frame_link">YouTube канале.</a>
+        <span class="video-frame_subtitle">
+          Все видео вы можете найте на нашем
+          <a
+            class="video-frame_link"
+            href="https://www.youtube.com/channel/UCcxMSzN1R4JfW1vLu3swCaQ"
+          >
+            YouTube канале.</a
+          >
         </span>
       </div>
       <banner>И В ОТЛИЧИЕ ОТ РАКА,</banner>
@@ -47,7 +51,7 @@ export default {
   },
   data() {
     return {
-      link: 'https://www.youtube.com/embed/I6ScxmFRU74',
+      link: 'https://www.youtube.com/embed/coOppM34GtI',
     };
   },
 };
@@ -103,5 +107,6 @@ export default {
 
 .video-frame_link {
   text-decoration: underline;
+  color: #666666;
 }
 </style>

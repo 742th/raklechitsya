@@ -5,7 +5,8 @@
       :src="url"
       allowfullscreen
       allow="accelerometer; autoplay; ecrypted-media; gyroscope; picture-in-picture"
-    ></iframe>
+    >
+    </iframe>
   </div>
 </template>
 
