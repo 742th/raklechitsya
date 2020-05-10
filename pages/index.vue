@@ -19,6 +19,7 @@
       </panel>
     </section>
     <Story />
+    <Statistics />
     <About />
   </div>
 </template>
@@ -31,6 +32,7 @@ import Panel from '@/components/Panel';
 import Video from '@/components/blocks/Video';
 import Story from '@/components/blocks/Storytell';
 import About from '@/components/blocks/About';
+import Statistics from '@/components/Statistics';
 
 export default {
   components: {
@@ -41,6 +43,7 @@ export default {
     Cover,
     Story,
     About,
+    Statistics,
   },
 };
 </script>
