@@ -1,7 +1,9 @@
 // Заголовок, как самостоятельно используется, так и с QuoteParagaph
 <template>
   <div class="title">
-    <h3 class="title-text"><slot></slot></h3>
+    <h3 class="title-text">
+      <slot></slot>
+    </h3>
   </div>
 </template>
 
