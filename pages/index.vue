@@ -1,14 +1,7 @@
-<template>
-  <div></div>
-</template>
+<template> </template>
 
 <script scoped>
-import instagramSection from '@/components/instagramSection';
-export default {
-  components: {
-    'instagram-section': instagramSection,
-  },
-};
+export default {};
 </script>
 
 <style></style>
