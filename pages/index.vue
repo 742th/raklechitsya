@@ -1,16 +1,16 @@
 <template>
-  <div class="container"></div>
+  <div class="container">
+    <instagram-section></instagram-section>
+  </div>
 </template>
 
-<script></script>
+<script scoped>
+import instagramSection from '@/components/instagramSection';
+export default {
+  components: {
+    'instagram-section': instagramSection,
+  },
+};
+</script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-</style>
+<style></style>
