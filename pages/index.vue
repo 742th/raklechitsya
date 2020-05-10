@@ -19,14 +19,7 @@
       </panel>
     </section>
     <Story />
-    <section>
-      <panel class="statistics">
-        <Title>
-          Статистика по онкозаболеваниям
-        </Title>
-        <Statistic />
-      </panel>
-    </section>
+    <Statistics />
     <About />
   </div>
 </template>
@@ -39,8 +32,7 @@ import Panel from '@/components/Panel';
 import Video from '@/components/blocks/Video';
 import Story from '@/components/blocks/Storytell';
 import About from '@/components/blocks/About';
-import Title from '@/components/UI/Title';
-import Statistic from '@/components/Statistic';
+import Statistics from '@/components/Statistics';
 
 export default {
   components: {
@@ -51,8 +43,7 @@ export default {
     Cover,
     Story,
     About,
-    Title,
-    Statistic,
+    Statistics,
   },
 };
 </script>
@@ -93,11 +84,4 @@ export default {
   flex-direction: column;
 }
 /* Конец блока карточки с историями */
-/* Начало блока Статистики */
-.statistics.statistics {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-top: 100px;
-}
 </style>

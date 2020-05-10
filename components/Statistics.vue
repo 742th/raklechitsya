@@ -1,34 +1,41 @@
 <template>
-  <div class="statistics-box">
-    <div v-for="card in statisticCard" :key="card.id" class="statistic__card">
-      <p class="statistic__info">{{ card.info }}</p>
-      <div>
-        <!-- здесь должна быть логика, что если есть card.value то выводит первый график, если нет такого значения, то второй -->
-        <Graph
-          v-if="card.value"
-          :value="card.value"
-          :maxValue="card.maxValue"
-        />
-        <DoubleGraph
-          v-if="card.firstValue"
-          :firstValue="card.firstValue"
-          :secondValue="card.secondValue"
-        />
-        <p class="statistic__numbers">{{ card.numbers }}</p>
-        <p class="statistic__resource">{{ card.resourse }}</p>
+  <Panel class="statistics">
+    <Title>Статистика по онкозаболеваниям</Title>
+    <div class="statistics-box">
+      <div v-for="card in statisticCard" :key="card.id" class="statistic__card">
+        <p class="statistic__info">{{ card.info }}</p>
+        <div>
+          <!-- здесь должна быть логика, что если есть card.value то выводит первый график, если нет такого значения, то второй -->
+          <Graph
+            v-if="card.value"
+            :value="card.value"
+            :maxValue="card.maxValue"
+          />
+          <DoubleGraph
+            v-if="card.firstValue"
+            :firstValue="card.firstValue"
+            :secondValue="card.secondValue"
+          />
+          <p class="statistic__numbers">{{ card.numbers }}</p>
+          <p class="statistic__resource">{{ card.resourse }}</p>
+        </div>
       </div>
     </div>
-  </div>
+  </Panel>
 </template>
 
 <script>
 import Graph from '@/components/UI/Graph';
 import DoubleGraph from '@/components/UI/DoubleGraph';
+import Panel from '@/components/Panel';
+import Title from '@/components/UI/Title';
 
 export default {
   components: {
     Graph,
     DoubleGraph,
+    Panel,
+    Title,
   },
   data() {
     return {
@@ -75,6 +82,13 @@ export default {
 </script>
 
 <style>
+.statistics.statistics {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
 .statistics-box {
   display: flex;
   flex-direction: row;
