@@ -18,6 +18,7 @@
         <BtnStory />
       </panel>
     </section>
+    <Story />
     <section>
       <panel class="statistics">
         <Title>
@@ -26,7 +27,6 @@
         <Statistic />
       </panel>
     </section>
-    <Story />
     <About />
   </div>
 </template>
@@ -94,9 +94,10 @@ export default {
 }
 /* Конец блока карточки с историями */
 /* Начало блока Статистики */
-.statistics {
+.statistics.statistics {
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-top: 100px;
 }
 </style>

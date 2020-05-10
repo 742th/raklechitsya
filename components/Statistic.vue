@@ -3,7 +3,17 @@
     <div v-for="card in statisticCard" :key="card.id" class="statistic__card">
       <p class="statistic__info">{{ card.info }}</p>
       <div>
-        <Graph :value="card.value" :maxValue="card.maxValue" />
+        <!-- здесь должна быть логика, что если есть card.value то выводит первый график, если нет такого значения, то второй -->
+        <Graph
+          v-if="card.value"
+          :value="card.value"
+          :maxValue="card.maxValue"
+        />
+        <DoubleGraph
+          v-if="card.firstValue"
+          :firstValue="card.firstValue"
+          :secondValue="card.secondValue"
+        />
         <p class="statistic__numbers">{{ card.numbers }}</p>
         <p class="statistic__resource">{{ card.resourse }}</p>
       </div>
@@ -13,10 +23,12 @@
 
 <script>
 import Graph from '@/components/UI/Graph';
+import DoubleGraph from '@/components/UI/DoubleGraph';
 
 export default {
   components: {
     Graph,
+    DoubleGraph,
   },
   data() {
     return {
@@ -44,6 +56,8 @@ export default {
             'На 28% выросла доля выявления заболеваний на ранней стадии за 10 лет.',
           numbers: '↑28%',
           resourse: 'МНИОИ Герцена 2018',
+          firstValue: 61,
+          secondValue: 89,
         },
         {
           id: '3',
@@ -51,6 +65,8 @@ export default {
             'На 25% снизилась смертность в течение первого года после постановки диагноза.',
           numbers: '↓25%',
           resourse: 'МНИОИ Герцена 2018',
+          firstValue: 73,
+          secondValue: 48,
         },
       ],
     };
