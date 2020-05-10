@@ -2,6 +2,7 @@
 <template>
   <section class="video">
     <panel>
+      <div class="video-block">
       <div class="quote">
         <quote-title class="quote__title"
           >Истории людей, победивших рак, но не свои привычки</quote-title
@@ -28,6 +29,7 @@
           >
         </span>
       </div>
+    </div>
       <banner>И В ОТЛИЧИЕ ОТ РАКА,</banner>
     </panel>
   </section>
@@ -58,13 +60,17 @@ export default {
 </script>
 
 <style scoped>
+.video-block {
+  display: flex;
+  width: 100%
+}
 .panel {
   flex-wrap: wrap;
+  flex-direction: column;
 }
 .video {
   background-color: #ffffff;
   width: 100%;
-  display: flex;
   flex-wrap: wrap;
 }
 
@@ -76,8 +82,7 @@ export default {
   display: flex;
   flex-direction: column;
   max-width: 413px;
-  margin: 110px auto 0px 0px;
-  height: 50%;
+  margin: 110px 40px 0px 0px;
 }
 
 .buttons {
@@ -92,8 +97,10 @@ export default {
 .video_container {
   display: flex;
   flex-direction: column;
-  height: 50%;
+  max-width: 867px;
+  width: 100%;
 }
+
 .video-frame_subtitle {
   font-style: normal;
   font-weight: normal;
