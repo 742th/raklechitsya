@@ -15,12 +15,12 @@ export default {};
 .banner {
   width: 100%;
   max-width: 1320px;
-  max-height: 86px;
+  min-height: 86px;
   background: #613a93;
   border: 1px solid #000000;
   box-sizing: border-box;
   text-transform: uppercase;
-  margin: 100px auto 0px;
+  margin: 74px auto 0px;
   display: flex;
   align-items: center;
   justify-content: center;
