@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
-    <instagram-section></instagram-section>
-  </div>
+  <div></div>
 </template>
 
 <script scoped>
