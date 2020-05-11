@@ -13,12 +13,14 @@
         <div class="about__buttons-block">
           <button-from
             class="buttons-block"
+            :unactive-white="unact"
             @btnClick="oneVar"
             :theme="'default'"
             >Рак Лечится</button-from
           >
           <button-from
             class="buttons-block"
+            :unactive-white="show"
             @btnClick="twoVar"
             :theme="'default'"
             >Фонд Хабенского</button-from
@@ -71,15 +73,17 @@ export default {
   methods: {
     oneVar() {
       this.show = true;
-      this.theme = '-active';
+      this.unact = false;
     },
     twoVar() {
       this.show = false;
+      this.unact = true;
     },
   },
   data() {
     return {
       show: true,
+      unact: false,
     };
   },
 };

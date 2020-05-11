@@ -50,10 +50,6 @@ export default {
 
 <style>
 .container {
-  margin: 0 auto;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
   background-color: #ffffff;
 }
 
