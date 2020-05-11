@@ -29,4 +29,17 @@ export default {};
   text-decoration: none;
   color: black;
 }
+
+@media screen and (max-width: 1300px) {
+  .button-story {
+    height: 78px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .button-story {
+    height: 50px;
+    font-size: 13px;
+  }
+}
 </style>

@@ -128,4 +128,54 @@ export default {
   line-height: 16px;
   margin-top: 20px;
 }
+
+@media screen and (max-width: 1300px) {
+  .statistic__card {
+    width: 265px;
+    height: 265px;
+    padding: 18px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .statistic__card {
+    width: 235px;
+    height: 235px;
+    padding: 13px;
+  }
+
+  .statistic__numbers {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .statistic__info {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .statistic__resource {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .statistic__card {
+    width: 208px;
+    height: 208px;
+    padding: 10px;
+  }
+  .statistics.statistics {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .statistic__card {
+  }
+  .statistics.statistics {
+    margin-top: 80px;
+  }
+}
 </style>

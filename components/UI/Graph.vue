@@ -33,4 +33,18 @@ export default {
   height: 100%;
   background: #613a93;
 }
+
+@media screen and (max-width: 1300px) {
+  .graph {
+    width: 229px;
+    height: 36px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .graph {
+    width: 188px;
+    height: 28px;
+  }
+}
 </style>

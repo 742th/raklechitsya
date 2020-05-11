@@ -18,4 +18,16 @@ export default {};
   color: inherit;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 1300px) {
+  .panel {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .panel {
+    padding: 0 40px;
+  }
+}
 </style>

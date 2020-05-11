@@ -44,4 +44,18 @@ export default {
   height: 50%;
   background: #613a93;
 }
+
+@media screen and (max-width: 1300px) {
+  .doublegraph {
+    width: 229px;
+    height: 36px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .doublegraph {
+    width: 188px;
+    height: 28px;
+  }
+}
 </style>

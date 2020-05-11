@@ -74,14 +74,62 @@ export default {
 
 .cards-stories__container {
   display: inline-grid;
-  grid-template-columns: repeat(4, 300px);
+  grid-template-columns: repeat(4, minmax(280px, 300px));
   grid-template-rows: repeat(2, auto);
   grid-gap: 70px 40px;
-  margin-bottom: 70px;
+  justify-content: space-between;
 }
 
 .cards-stories__panel {
   flex-direction: column;
 }
 /* Конец блока карточки с историями */
+
+/* адаптация */
+@media screen and (max-width: 1425px) {
+  .cards-stories__container {
+    grid-gap: 60px 40px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .cards-stories__container {
+    grid-template-columns: repeat(4, minmax(240px, 265px));
+    margin-bottom: 60px;
+  }
+  .cards-stories__title {
+    margin: 90px 0 60px 0px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .cards-stories__container {
+    grid-template-columns: repeat(4, minmax(208px, 238px));
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 46px 30px;
+  }
+
+  .cards-stories__title {
+    margin: 80px 0 46px 0px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .cards-stories__container {
+    grid-template-columns: repeat(4, 208px);
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .cards-stories__container {
+    grid-template-columns: repeat(3, 216px);
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 40px;
+  }
+  .cards-stories__title {
+    margin: 80px auto 60px auto;
+    text-align: center;
+  }
+}
 </style>
