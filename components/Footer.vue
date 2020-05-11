@@ -14,7 +14,7 @@
           <a href="#" class="footer__social-link">Инстаграме</a>
           <p class="footer__text">и</p>
           <a href="#" class="footer__social-link">Youtube</a>
-          <p class="footer__add">Поделитесь <span>&#129125;</span></p>
+          <p class="footer__add">Поделитесь ↗</p>
         </div>
       </div>
       <div class="copyright">
@@ -35,6 +35,10 @@ export default {
 </script>
 
 <style scoped>
+.footer__menu{
+  margin-left: -200px;
+  margin-top:10px;
+}
 .footer__menu-link {
   text-decoration: none;
   font-size: 18px;
@@ -42,13 +46,12 @@ export default {
   margin-right: 40px;
 }
 .footer {
-  margin-top: 360px;
+  margin-top: 60px;
 }
 .panel {
   display: flex;
   flex-direction: column;
 }
-
 .footer__title {
   display: block;
   max-width: 340px;
@@ -56,13 +59,14 @@ export default {
   font-size: 32px;
 }
 .footer__links {
+  
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 .copyright {
-  margin-top: 126px;
+  margin-top: 116px;
   margin-bottom: 60px;
   width: 100%;
   display: flex;
@@ -70,39 +74,27 @@ export default {
   font-size: 18px;
   color: #898989;
 }
-
 .copyright__name {
   display: block;
 }
 .copyrigth__author {
   display: block;
-}
 
+}
 .footer__text {
   display: inline-block;
   font-size: 18px;
 }
-
 .footer__social-link {
+  
   text-decoration: none;
   color: black;
 }
-
 .footer__social-link:hover {
   color: blue;
 }
-
 .footer__add {
   margin-top: 44px;
 }
-/*
-.footer__add::after {
-  content: ' ';
-  border: 0.5px solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 5px;
-  margin-left: 5px;
-  transform: rotate(-90deg);
-}*/
+
 </style>
