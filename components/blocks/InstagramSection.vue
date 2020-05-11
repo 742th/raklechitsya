@@ -54,7 +54,7 @@ export default {
 }
 
 .instagram-banner {
-  max-height: 130px;
+  min-height: 130px;
   flex-direction: column;
 }
 
@@ -119,7 +119,7 @@ export default {
   }
 
   .instagram-banner {
-    max-height: 117px;
+    min-height: 117px;
   }
 
   .instagram__brief {
@@ -156,7 +156,7 @@ export default {
   }
 
   .instagram-banner {
-    max-height: 100px;
+    min-height: 100px;
   }
 
   .instagram__cards-container {
