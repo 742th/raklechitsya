@@ -5,16 +5,20 @@
         <h3 class="footer__title">
           Спасибо всем, кто помог состояться этому проекту
         </h3>
-        <nav class="footer__menu">
-          <nuxt-link to="/" class="footer__menu-link">Главная</nuxt-link>
-          <nuxt-link to="stories" class="footer__menu-link">Истроии</nuxt-link>
-        </nav>
-        <div class="footer__social-links">
-          <p class="footer__text">Мы в</p>
-          <a href="#" class="footer__social-link">Инстаграме</a>
-          <p class="footer__text">и</p>
-          <a href="#" class="footer__social-link">Youtube</a>
-          <p class="footer__add">Поделитесь ↗</p>
+        <div class="box-links">
+          <nav class="footer__menu">
+            <nuxt-link to="/" class="footer__menu-link">Главная</nuxt-link>
+            <nuxt-link to="stories" class="footer__menu-link"
+              >Истроии</nuxt-link
+            >
+          </nav>
+          <div class="footer__social-links">
+            <p class="footer__text">Мы в</p>
+            <a href="#" class="footer__social-link">Инстаграме</a>
+            <p class="footer__text">и</p>
+            <a href="#" class="footer__social-link">Youtube</a>
+            <p class="footer__add">Поделитесь ↗</p>
+          </div>
         </div>
       </div>
       <div class="copyright">
@@ -35,18 +39,20 @@ export default {
 </script>
 
 <style scoped>
-.footer__menu{
-  margin-left: -200px;
-  margin-top:10px;
+.footer__menu {
+  margin-right: 379px;
 }
 .footer__menu-link {
   text-decoration: none;
   font-size: 18px;
   color: black;
+}
+.footer__menu-link:first-of-type {
   margin-right: 40px;
 }
 .footer {
-  margin-top: 60px;
+  padding-top: 60px;
+  background: #fbfbfb;
 }
 .panel {
   display: flex;
@@ -54,19 +60,24 @@ export default {
 }
 .footer__title {
   display: block;
-  max-width: 340px;
+  width: 400px;
   font-weight: 600;
   font-size: 32px;
+  line-height: 36px;
 }
 .footer__links {
-  
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   align-items: flex-start;
 }
+.box-links {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
 .copyright {
-  margin-top: 116px;
+  margin-top: 110px;
   margin-bottom: 60px;
   width: 100%;
   display: flex;
@@ -79,14 +90,12 @@ export default {
 }
 .copyrigth__author {
   display: block;
-
 }
 .footer__text {
   display: inline-block;
   font-size: 18px;
 }
 .footer__social-link {
-  
   text-decoration: none;
   color: black;
 }
@@ -96,5 +105,4 @@ export default {
 .footer__add {
   margin-top: 44px;
 }
-
 </style>
