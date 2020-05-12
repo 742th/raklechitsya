@@ -10,10 +10,18 @@
         </Quote>
       </div>
       <div class="story__buttons-block">
-        <button-from class="buttons-block" @btnClick="oneVar" :theme="'grey'"
+        <button-from
+          class="buttons-block"
+          :unactive="unact"
+          @btnClick="oneVar"
+          :theme="'grey'"
           >1-й вариант</button-from
         >
-        <button-from class="buttons-block" @btnClick="twoVar" :theme="'grey'"
+        <button-from
+          class="buttons-block"
+          :unactive="show"
+          @btnClick="twoVar"
+          :theme="'grey'"
           >2-й вариант</button-from
         >
       </div>
@@ -27,7 +35,11 @@
           >Оставить контакт (почту или номер телефона) и мы свяжемся с вами,
           зададим вопросы, уточним детали вашей истории.
         </Quote>
-        <button-from v-if="show" class="story__button" :theme="'default'"
+        <button-from
+          v-if="show"
+          @btnClick="openPopup"
+          class="story__button"
+          :theme="'default'"
           >Заполнить форму</button-from
         >
         <button-from v-else class="story__button" :theme="'default'"
@@ -53,15 +65,20 @@ export default {
   methods: {
     oneVar() {
       this.show = true;
-      this.theme = '-active';
+      this.unact = false;
     },
     twoVar() {
       this.show = false;
+      this.unact = true;
+    },
+    openPopup() {
+      this.$store.commit('popup/togglePopup');
     },
   },
   data() {
     return {
       show: true,
+      unact: false,
     };
   },
 };

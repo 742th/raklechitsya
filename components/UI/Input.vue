@@ -1,16 +1,35 @@
 <template>
-  <input class="input-search" />
+  <input
+    :class="['com-input', theme]"
+    :type="type"
+    :placeholder="placeholder"
+  />
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    type: String,
+    placeholder: String,
+    theme: String,
+  },
+};
 </script>
 
 <style scoped>
-.input-search {
-  width: 100%;
-  height: 100%;
-  border: 1px solid #e8e8e8;
+.com-input {
+  width: 840px;
+  height: 24px;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.bottom {
+  border-bottom: 1px solid #e7e7e7;
   box-sizing: border-box;
+  padding: 0 0 10px 0;
 }
 </style>

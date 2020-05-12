@@ -1,5 +1,12 @@
 <template>
-  <button :class="['open', `open_theme_${theme}`]" @click="$emit('btnClick')">
+  <button
+    :class="[
+      'open',
+      `open_theme_${theme}`,
+      { unactive: unactive, 'unactive-white': unactiveWhite },
+    ]"
+    @click="$emit('btnClick')"
+  >
     <slot></slot>
   </button>
 </template>
@@ -8,6 +15,8 @@
 export default {
   props: {
     theme: String,
+    unactive: Boolean,
+    unactiveWhite: Boolean,
   },
 };
 </script>
@@ -36,10 +45,17 @@ export default {
 }
 .open_theme_white {
   background-color: #ffffff;
-  color: #121212;
+  color: #000000;
 }
 .open_theme_grey {
   background-color: #f7f7f7;
-  color: #121212;
+  color: #000000;
+}
+
+.unactive {
+  color: #a2a2a2;
+}
+.unactive-white {
+  color: #c9c9c9;
 }
 </style>
