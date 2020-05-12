@@ -68,7 +68,6 @@ export default {
 .footer__links {
   width: 100%;
   display: flex;
-  /*justify-content: space-between;*/
   align-items: flex-start;
 }
 .box-links {
