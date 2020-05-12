@@ -35,7 +35,11 @@
           >Оставить контакт (почту или номер телефона) и мы свяжемся с вами,
           зададим вопросы, уточним детали вашей истории.
         </Quote>
-        <button-from v-if="show" class="story__button" :theme="'default'"
+        <button-from
+          v-if="show"
+          @btnClick="openPopup"
+          class="story__button"
+          :theme="'default'"
           >Заполнить форму</button-from
         >
         <button-from v-else class="story__button" :theme="'default'"
@@ -66,6 +70,9 @@ export default {
     twoVar() {
       this.show = false;
       this.unact = true;
+    },
+    openPopup() {
+      this.$store.commit('popup/togglePopup');
     },
   },
   data() {

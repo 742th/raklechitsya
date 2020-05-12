@@ -1,9 +1,7 @@
 <template>
   <div class="banner">
-    <span class="banner_title"
-      ><slot></slot>
-      <p class="banner_hash">#ЭТОНЕЛЕЧИТСЯ</p>
-    </span>
+    <span class="banner_title"><slot class="banner_title"></slot> </span>
+    <p class="banner_hash">#ЭТОНЕЛЕЧИТСЯ</p>
   </div>
 </template>
 

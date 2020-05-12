@@ -18,9 +18,14 @@
         <BtnStory />
       </panel>
     </section>
+    <Insta />
     <Story />
     <Statistics />
     <About />
+    <Popup v-if="popupShow">
+      <Quiz />
+    </Popup>
+    <Footer />
   </div>
 </template>
 
@@ -32,7 +37,9 @@ import Panel from '@/components/Panel';
 import Video from '@/components/blocks/Video';
 import Story from '@/components/blocks/Storytell';
 import About from '@/components/blocks/About';
-import Statistics from '@/components/Statistics';
+import Statistics from '@/components/blocks/Statistics';
+import Popup from '@/components/Popup';
+import Quiz from '@/components/UI/FormQuiz';
 
 export default {
   components: {
@@ -44,6 +51,13 @@ export default {
     Story,
     About,
     Statistics,
+    Popup,
+    Quiz,
+  },
+  computed: {
+    popupShow() {
+      return this.$store.getters['popup/getPopupQuiz'];
+    },
   },
 };
 </script>
