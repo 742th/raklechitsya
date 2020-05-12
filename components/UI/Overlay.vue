@@ -1,5 +1,5 @@
 <template>
-  <div class="overlay">
+  <div class="overlay" @click="$emit('LayClick')">
     <slot></slot>
   </div>
 </template>
@@ -15,9 +15,8 @@ export default {};
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000;
-  opacity: 0.5;
-  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;

@@ -15,7 +15,6 @@ export default {};
   display: flex;
   max-width: 1440px;
   padding: 0 60px;
-  color: inherit;
   margin: 0 auto;
 }
 </style>
