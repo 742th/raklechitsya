@@ -18,9 +18,7 @@
         <BtnStory />
       </panel>
     </section>
-    <Panel>
-      <InstagramSection />
-    </Panel>
+    <InstagramSection />
     <Story />
     <Statistics />
     <About />
