@@ -1,9 +1,9 @@
 <template>
   <Panel>
     <section class="instagram">
-      <banner class="instagram-banner">
-        <h2 class="instagram__title">РАССКАЗЫВАЙТЕ ВАШИ ИСТОРИИ В ИНСТАГРАМ</h2>
-      </banner>
+      <banner class="instagram__banner"
+        >РАССКАЗЫВАЙТЕ ВАШИ ИСТОРИИ В ИНСТАГРАМ</banner
+      >
       <div class="instagram__content-container">
         <div class="instagram__brief">
           <a
@@ -35,14 +35,14 @@
 </template>
 
 <script>
+import Banner from '@/components/UI/Banner';
 import Panel from '@/components/Panel';
 import instagramCard from '@/components/UI/instagramCard';
-import InstagramBanner from '@/components/UI/InstagramBanner';
 import QuoteParagraph from '@/components/UI/QuoteParagraph';
 export default {
   components: {
+    banner: Banner,
     'instagram-card': instagramCard,
-    banner: InstagramBanner,
     'quote-paragraph': QuoteParagraph,
     Panel,
   },
@@ -54,14 +54,14 @@ export default {
   width: 100%;
 }
 
+.instagram__banner {
+  flex-direction: column;
+  min-height: 130px;
+}
+
 .instagram__content-container {
   margin-top: 100px;
   display: flex;
-}
-
-.instagram-banner {
-  min-height: 130px;
-  flex-direction: column;
 }
 
 .instagram__title {
@@ -98,6 +98,11 @@ export default {
     margin-top: 90px;
   }
 
+  .instagram__banner {
+    flex-direction: column;
+    min-height: 130px;
+  }
+
   .instagram__cards-container {
     grid-gap: 26px;
   }
@@ -112,12 +117,13 @@ export default {
     margin-top: 80px;
   }
 
-  .instagram-banner {
-    min-height: 117px;
-  }
-
   .instagram__brief {
     padding-right: 60px;
+  }
+
+  .instagram__banner {
+    flex-direction: column;
+    min-height: 117px;
   }
 
   .instagram__cards-container {
@@ -135,6 +141,11 @@ export default {
     align-items: center;
   }
 
+  .instagram__banner {
+    flex-direction: column;
+    min-height: 100px;
+  }
+
   .instagram__brief {
     width: 50%;
     padding: 0;
@@ -142,10 +153,6 @@ export default {
 
   .instagram-title {
     font-size: 22px;
-  }
-
-  .instagram-banner {
-    min-height: 100px;
   }
 
   .instagram__cards-container {
