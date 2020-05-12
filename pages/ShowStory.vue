@@ -9,13 +9,14 @@
           <card />
           <card />
         </div>
-        <button class="stories-cards__button">Больше статей</button>
+        <button-story class="stories-cards__button">Больше статей</button-story>
       </section>
     </panel>
   </div>
 </template>
 
 <script>
+import BtnStory from '@/components/UI/BtnStory';
 import Card from '@/components/Card';
 import Panel from '@/components/Panel';
 import FullStory from '@/components/blocks/FullStory';
@@ -24,6 +25,7 @@ export default {
     'full-story': FullStory,
     panel: Panel,
     card: Card,
+    'button-story': BtnStory,
   },
 };
 </script>

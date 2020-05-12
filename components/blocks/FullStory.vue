@@ -15,7 +15,9 @@
             «Я не могу победить свою пунктуальность в отличии от рака»
           </h1>
           <div class="story__footer">
-            <button class="story__button_brief">Поделитесь ↗</button>
+            <button-share class="story__button_brief" :theme="'white'"
+              >Поделитесь ↗</button-share
+            >
             <p class="story__date">20 апреля 2018</p>
           </div>
         </div>
@@ -45,19 +47,21 @@
           laudantium sit impedit dolor doloremque reprehenderit nesciunt, id
           soluta ipsam mollitia.
         </p>
-        <button class="story__button">
+        <button-share class="story__button" :theme="'white'">
           Поделитесь этой статьей в своих социальных сетях ↗
-        </button>
+        </button-share>
       </div>
     </section>
   </panel>
 </template>
 
 <script>
+import ButtonForm from '@/components/UI/ButtonForm';
 import Panel from '@/components/Panel';
 export default {
   components: {
     panel: Panel,
+    'button-share': ButtonForm,
   },
 };
 </script>
@@ -129,5 +133,17 @@ export default {
   font-size: 22px;
   line-height: 1.363;
   padding-bottom: 70px;
+}
+
+.story__button_brief {
+  height: fit-content;
+  width: fit-content;
+}
+
+.story__button {
+  width: 100%;
+  height: 85px;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
 }
 </style>
