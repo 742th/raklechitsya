@@ -18,7 +18,9 @@
         <BtnStory />
       </panel>
     </section>
-    <Insta />
+    <Panel>
+      <InstagramSection />
+    </Panel>
     <Story />
     <Statistics />
     <About />
@@ -36,6 +38,7 @@ import BtnStory from '@/components/UI/BtnStory';
 import Panel from '@/components/Panel';
 import Video from '@/components/blocks/Video';
 import Story from '@/components/blocks/Storytell';
+import InstagramSection from '@/components/blocks/InstagramSection';
 import About from '@/components/blocks/About';
 import Statistics from '@/components/blocks/Statistics';
 import Popup from '@/components/Popup';
@@ -49,6 +52,7 @@ export default {
     Video,
     Cover,
     Story,
+    InstagramSection,
     About,
     Statistics,
     Popup,
@@ -64,6 +68,9 @@ export default {
 
 <style>
 .container {
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
   background-color: #ffffff;
 }
 
