@@ -8,8 +8,11 @@
       <nav class="header__menu">
         <nuxt-link to="/" class="header__menu-link">Главная</nuxt-link>
         <nuxt-link to="stories" class="header__menu-link">Истроии</nuxt-link>
-        <nuxt-link to="makeStory" class="header__menu-link"
-          >Рассказать историю</nuxt-link
+        <button-block
+          @btnClick="openPopup"
+          :theme="'white'"
+          class="header__menu-button"
+          >Рассказать историю</button-block
         >
       </nav>
     </panel>
@@ -18,9 +21,16 @@
 
 <script>
 import Panel from '@/components/Panel';
+import ButtonForm from '@/components/UI/ButtonForm';
 export default {
   components: {
     panel: Panel,
+    'button-block': ButtonForm,
+  },
+  methods: {
+    openPopup() {
+      this.$store.commit('popup/togglePopup');
+    },
   },
 };
 </script>
@@ -58,7 +68,15 @@ export default {
   text-decoration: none;
   margin: 26px 40px 26px auto;
 }
-.header__menu-link:last-child {
-  margin-right: 0px;
+
+.header__menu-button {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #121212;
+  text-decoration: none;
+  width: 182px;
+  margin: 0;
 }
 </style>

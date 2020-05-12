@@ -1,18 +1,16 @@
 <template>
   <div>
     <Header />
-    <Popup />
+
     <nuxt />
   </div>
 </template>
 
 <script>
 import Header from '@/components/blocks/Header';
-import Popup from '@/components/Popup';
 export default {
   components: {
     Header,
-    Popup,
   },
 };
 </script>

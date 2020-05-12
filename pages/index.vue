@@ -18,12 +18,14 @@
         <BtnStory />
       </panel>
     </section>
-    <Panel>
-      <InstagramSection />
-    </Panel>
+    <InstagramSection />
     <Story />
     <Statistics />
     <About />
+    <Popup v-if="popupShow">
+      <Quiz />
+    </Popup>
+    <Footer />
   </div>
 </template>
 
@@ -36,7 +38,9 @@ import Video from '@/components/blocks/Video';
 import Story from '@/components/blocks/Storytell';
 import InstagramSection from '@/components/blocks/InstagramSection';
 import About from '@/components/blocks/About';
-import Statistics from '@/components/Statistics';
+import Statistics from '@/components/blocks/Statistics';
+import Popup from '@/components/Popup';
+import Quiz from '@/components/UI/FormQuiz';
 
 export default {
   components: {
@@ -49,6 +53,13 @@ export default {
     InstagramSection,
     About,
     Statistics,
+    Popup,
+    Quiz,
+  },
+  computed: {
+    popupShow() {
+      return this.$store.getters['popup/getPopupQuiz'];
+    },
   },
 };
 </script>
