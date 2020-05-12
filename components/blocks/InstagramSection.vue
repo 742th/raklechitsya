@@ -1,6 +1,6 @@
 <template>
   <Panel>
-    <section class="instagram-section">
+    <section class="instagram">
       <banner class="instagram-banner">
         <h2 class="instagram__title">РАССКАЗЫВАЙТЕ ВАШИ ИСТОРИИ В ИНСТАГРАМ</h2>
       </banner>
@@ -12,12 +12,12 @@
             target="_blank"
             >Инстаграм</a
           >
-          <p class="instagram__paragraph">
+          <quote-paragraph class="instagram__paragraph">
             Два раза в неделю мы просматриваем все посты по хештегу
             #этонелечится. Все истории, где нет нецензурных выражений и
             запрещенного контента попадают сюда. Следите за правильным
             написанием хештега, чтобы мы не пропустили вашу историю.
-          </p>
+          </quote-paragraph>
         </div>
         <div class="instagram__cards-container">
           <instagram-card></instagram-card>
@@ -38,16 +38,22 @@
 import Panel from '@/components/Panel';
 import instagramCard from '@/components/UI/instagramCard';
 import InstagramBanner from '@/components/UI/InstagramBanner';
+import QuoteParagraph from '@/components/UI/QuoteParagraph';
 export default {
   components: {
     'instagram-card': instagramCard,
     banner: InstagramBanner,
+    'quote-paragraph': QuoteParagraph,
     Panel,
   },
 };
 </script>
 
 <style scoped>
+.instagram {
+  width: 100%;
+}
+
 .instagram__content-container {
   margin-top: 100px;
   display: flex;
@@ -78,13 +84,6 @@ export default {
   grid-gap: 30px;
 }
 
-.instagram__paragraph {
-  font-size: 18px;
-  line-height: 1.25;
-  color: #666666;
-  padding-top: 28px;
-}
-
 .instagram__link {
   text-decoration: none;
   font-size: 32px;
@@ -101,11 +100,6 @@ export default {
 
   .instagram__cards-container {
     grid-gap: 26px;
-  }
-
-  .instagram__paragraph {
-    font-size: 16px;
-    padding-top: 26px;
   }
 
   .instagram__link {
@@ -130,17 +124,12 @@ export default {
     grid-gap: 20px;
   }
 
-  .instagram__paragraph {
-    font-size: 13px;
-    padding-top: 17px;
-  }
-
   .instagram__link {
     font-size: 24px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .instagram__content-container {
     flex-direction: column;
     align-items: center;
@@ -161,10 +150,6 @@ export default {
 
   .instagram__cards-container {
     margin-top: 59px;
-  }
-
-  .instagram__paragraph {
-    padding-top: 25px;
   }
 
   .instagram__link {
