@@ -3,33 +3,33 @@
   <section class="video">
     <panel>
       <div class="video-block">
-      <div class="quote">
-        <quote-title class="quote__title"
-          >Истории людей, победивших рак, но не свои привычки</quote-title
-        >
-        <qoute-paragraph>
-          Есть вещи, которые не лечатся. Вещи ставшие частью нашего «я», фобии,
-          страхи. Но это точно не рак. Рак лечится. Лучшее доказательство — люди
-          с их историями.
-        </qoute-paragraph>
-        <div class="buttons">
-          <button-arrow-left />
-          <button-arrow-left class="arrow_right" />
+        <div class="quote">
+          <quote-title class="quote__title"
+            >Истории людей, победивших рак, но не свои привычки</quote-title
+          >
+          <qoute-paragraph>
+            Есть вещи, которые не лечатся. Вещи ставшие частью нашего «я»,
+            фобии, страхи. Но это точно не рак. Рак лечится. Лучшее
+            доказательство — люди с их историями.
+          </qoute-paragraph>
+          <div class="buttons">
+            <button-arrow-left />
+            <button-arrow-left class="arrow_right" />
+          </div>
+        </div>
+        <div class="video_container">
+          <videoIframe class="video-iframe" :url="link" />
+          <span class="video-frame_subtitle">
+            Все видео вы можете найте на нашем
+            <a
+              class="video-frame_link"
+              href="https://www.youtube.com/channel/UCcxMSzN1R4JfW1vLu3swCaQ"
+            >
+              YouTube канале.</a
+            >
+          </span>
         </div>
       </div>
-      <div class="video_container">
-        <videoIframe class="video-iframe" :url="link" />
-        <span class="video-frame_subtitle">
-          Все видео вы можете найте на нашем
-          <a
-            class="video-frame_link"
-            href="https://www.youtube.com/channel/UCcxMSzN1R4JfW1vLu3swCaQ"
-          >
-            YouTube канале.</a
-          >
-        </span>
-      </div>
-    </div>
       <banner>И В ОТЛИЧИЕ ОТ РАКА,</banner>
     </panel>
   </section>
@@ -62,7 +62,7 @@ export default {
 <style scoped>
 .video-block {
   display: flex;
-  width: 100%
+  width: 100%;
 }
 .panel {
   flex-wrap: wrap;
