@@ -38,7 +38,6 @@ export default {
   background-color: #ffffff;
   color: #121212;
 }
-
 .open_theme_grey {
   background-color: #f7f7f7;
   color: #121212;
