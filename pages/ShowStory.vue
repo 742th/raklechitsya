@@ -4,10 +4,10 @@
     <panel>
       <section class="stories-cards">
         <div class="stories-cards__container">
+          <!-- <card />
           <card />
           <card />
-          <card />
-          <card />
+          <card /> -->
         </div>
         <button-story class="stories-cards__button">Больше статей</button-story>
       </section>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import BtnStory from '@/components/UI/BtnStory';
+import ButtonForm from '@/components/UI/ButtonForm';
 import Card from '@/components/Card';
 import Panel from '@/components/Panel';
 import FullStory from '@/components/blocks/FullStory';
@@ -25,7 +25,7 @@ export default {
     'full-story': FullStory,
     panel: Panel,
     card: Card,
-    'button-story': BtnStory,
+    'button-story': ButtonForm,
   },
 };
 </script>
@@ -43,5 +43,29 @@ export default {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 40px;
   padding-bottom: 70px;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    padding-bottom: 90px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 50px 0;
+  }
 }
 </style>

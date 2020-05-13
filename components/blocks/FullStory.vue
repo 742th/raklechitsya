@@ -1,7 +1,7 @@
 <template>
   <panel>
     <section class="story">
-      <div class="story__container">
+      <div class="story__title-container">
         <span class="story__photo-container">
           <img
             src="https://www.sportsdaily.ru/s/image/92188.jpg"
@@ -9,17 +9,15 @@
             class="story__photo"
           />
         </span>
-        <div class="story__brief-container">
-          <h1 class="story__title">
-            <span>Александр Тарханов:</span>
-            «Я не могу победить свою пунктуальность в отличии от рака»
-          </h1>
-          <div class="story__footer">
-            <button-share class="story__button_brief" :theme="'white'"
-              >Поделитесь ↗</button-share
-            >
-            <p class="story__date">20 апреля 2018</p>
-          </div>
+        <h1 class="story__title">
+          <span>Александр Тарханов:</span>
+          «Я не могу победить свою пунктуальность в отличии от рака»
+        </h1>
+        <div class="story__footer">
+          <button-share class="story__button_brief" :theme="'white'"
+            >Поделитесь ↗</button-share
+          >
+          <p class="story__date">20 апреля 2018</p>
         </div>
       </div>
       <div class="content__container">
@@ -67,17 +65,17 @@ export default {
 </script>
 
 <style scoped>
-.story__container {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: space-between;
+.story__title-container {
+  display: grid;
+  grid-template-columns: 44.21% 4.29% 51.5%;
+  grid-template-rows: 2fr 1fr;
   width: 100%;
 }
 
 .story__photo-container {
-  width: 44.21%;
-  padding-bottom: 44%;
-  flex-shrink: 0;
+  grid-row: 1 / 3;
+  width: 100%;
+  padding-bottom: 100%;
   position: relative;
   object-fit: contain;
 }
@@ -90,16 +88,6 @@ export default {
   object-position: center;
 }
 
-.story__brief-container {
-  width: 51.65%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 30px 0;
-  border-top: 1px solid #efefef;
-  border-bottom: 1px solid #efefef;
-}
-
 .content__container {
   margin: 0 auto;
   width: 59%;
@@ -110,9 +98,12 @@ export default {
 }
 
 .story__title {
+  grid-area: 1 / 3 / 1 / 3;
   font-weight: normal;
   font-size: 38px;
   line-height: 1.263;
+  border-top: 1px solid #efefef;
+  padding-top: 30px;
 }
 
 .story__title span {
@@ -122,6 +113,10 @@ export default {
 .story__footer {
   display: flex;
   justify-content: space-between;
+  grid-area: 2 / 3 / 2 / 3;
+  align-self: end;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 30px;
 }
 
 .story__date {
@@ -164,8 +159,12 @@ export default {
 }
 
 @media (max-width: 1024px) {
-  .story__brief-container {
-    padding: 20px 0;
+  .story__title {
+    padding-top: 20px;
+  }
+
+  .story__footer {
+    padding-bottom: 20px;
   }
 
   .content__container {
@@ -189,85 +188,89 @@ export default {
     height: 70px;
   }
 }
-@media (max-width: 768px) {
-  .story__container {
-    flex-shrink: 0;
-    display: flex;
-    justify-content: space-between;
+@media (max-width: 800px) {
+  .story__title-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr auto;
     width: 100%;
   }
 
   .story__photo-container {
-    width: 44.21%;
-    padding-bottom: 44%;
-    flex-shrink: 0;
-    position: relative;
-    object-fit: contain;
-  }
-
-  .story__photo {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .story__brief-container {
-    width: 51.65%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 30px 0;
-    border-top: 1px solid #efefef;
-    border-bottom: 1px solid #efefef;
+    grid-row: 2 / 3;
+    width: 65.6%;
+    margin: 0 auto;
+    padding-bottom: 65.6%;
   }
 
   .content__container {
-    margin: 0 auto;
-    width: 59%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 130px 0 160px 0;
+    width: 100%;
+    padding: 100px 0 120px 0;
   }
 
   .story__title {
-    font-weight: normal;
-    font-size: 38px;
-    line-height: 1.263;
-  }
-
-  .story__title span {
-    font-weight: 500;
+    text-align: center;
+    grid-area: 1 / 1 / 1 / 1;
+    padding-top: 16px;
+    padding-bottom: 56px;
   }
 
   .story__footer {
-    display: flex;
-    justify-content: space-between;
+    grid-area: 3 / 1 / 3 / 1;
+    padding-bottom: 16px;
+    padding-top: 56px;
   }
 
   .story__date {
     font-size: 18px;
-    line-height: 1.33;
   }
 
   .story__text {
-    font-size: 22px;
-    line-height: 1.363;
-    padding-bottom: 66px;
+    font-size: 18px;
   }
 
-  .story__button_brief {
-    height: fit-content;
-    width: fit-content;
+  @media (max-width: 600px) {
+    .story__title {
+      font-size: 22px;
+      padding-bottom: 42px;
+    }
+
+    .content__container {
+      padding: 60px 0;
+    }
+
+    .story__footer {
+      padding-top: 42px;
+    }
   }
 
-  .story__button {
-    width: 100%;
-    height: 85px;
-    border-top: 1px solid #efefef;
-    border-bottom: 1px solid #efefef;
+  @media (max-width: 550px) {
+    .story__photo-container {
+      width: 100%;
+      padding-bottom: 100%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .content__container {
+      padding: 40px 0;
+    }
+
+    .story__title {
+      font-size: 18px;
+      padding-bottom: 28px;
+    }
+
+    .story__footer {
+      padding-top: 29px;
+    }
+
+    .story__date {
+      font-size: 13px;
+    }
+
+    .story__text {
+      font-size: 13px;
+    }
   }
 }
 </style>
