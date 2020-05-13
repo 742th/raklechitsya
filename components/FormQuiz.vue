@@ -13,7 +13,7 @@
       :placeholder="'Напишите тут'"
       :type="'text'"
       class="form__input"
-      @input="answer"
+      v-model="answer"
     />
     <button-block
       class="prev"
