@@ -28,7 +28,6 @@ export default {
     'button-story': BtnStory,
   },
   validate({ params }) {
-    console.log(params);
     // Должен быть числом
     return /^\d+$/.test(params.id);
   },
