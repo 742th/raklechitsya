@@ -17,7 +17,9 @@
             <a href="#" class="footer__social-link">Инстаграме</a>
             <p class="footer__text">и</p>
             <a href="#" class="footer__social-link">Youtube</a>
-            <p class="footer__add">Поделитесь ↗</p>
+            <ButtonForm class="footer__add" :theme="'light-grey'"
+              >Поделитесь ↗</ButtonForm
+            >
           </div>
         </div>
       </div>
@@ -31,9 +33,12 @@
 
 <script>
 import Panel from '@/components/Panel';
+import ButtonForm from '@/components/UI/ButtonForm';
+
 export default {
   components: {
     panel: Panel,
+    ButtonForm,
   },
 };
 </script>
@@ -103,5 +108,8 @@ export default {
 }
 .footer__add {
   margin-top: 44px;
+  height: 24px;
+  color: #121212;
+  text-align: left;
 }
 </style>
