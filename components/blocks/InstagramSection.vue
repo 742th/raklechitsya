@@ -7,7 +7,7 @@
       <div class="instagram__content-container">
         <div class="instagram__brief">
           <a
-            href="https://www.instagram.com/?hl=ru"
+            href="https://www.instagram.com/raklechitsa/"
             class="instagram__link"
             target="_blank"
             >Инстаграм</a

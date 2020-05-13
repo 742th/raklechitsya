@@ -1,11 +1,7 @@
 <template>
-  <input
-    :class="['com-input', theme]"
-    :type="type"
-    :placeholder="placeholder"
-    v-model="content"
-    @input="handle"
-  />
+  <input :class="['com-input', theme]" :type="type" :placeholder="placeholder"
+  <<<<<<< HEAD v-model="content" @input="handle" ======= >>>>>>>
+  8b2420a46af0df72088aecb124b6badc61c2f001 />
 </template>
 
 <script>
@@ -14,6 +10,7 @@ export default {
     type: String,
     placeholder: String,
     theme: String,
+<<<<<<< HEAD
     value: {
       type: String,
       default: '',
@@ -28,6 +25,8 @@ export default {
     handle(e) {
       this.$emit('input', this.content);
     },
+=======
+>>>>>>> 8b2420a46af0df72088aecb124b6badc61c2f001
   },
 };
 </script>
