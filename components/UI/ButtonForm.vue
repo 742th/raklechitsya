@@ -25,7 +25,9 @@ export default {
 .open {
   width: 100%;
   font-family: Inter, Arial, sans-serif;
+  max-width: 226px;
   height: 52px;
+  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;

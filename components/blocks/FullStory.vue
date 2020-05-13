@@ -132,7 +132,7 @@ export default {
 .story__text {
   font-size: 22px;
   line-height: 1.363;
-  padding-bottom: 70px;
+  padding-bottom: 66px;
 }
 
 .story__button_brief {
@@ -145,5 +145,129 @@ export default {
   height: 85px;
   border-top: 1px solid #efefef;
   border-bottom: 1px solid #efefef;
+}
+
+@media (max-width: 1280px) {
+  .content__container {
+    width: 61%;
+    padding: 120px 0 150px 0;
+  }
+
+  .story__title {
+    font-size: 34px;
+  }
+
+  .story__text {
+    font-size: 20px;
+    padding-bottom: 57px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .story__brief-container {
+    padding: 20px 0;
+  }
+
+  .content__container {
+    width: 69%;
+    padding: 90px 0 120px 0;
+  }
+
+  .story__title {
+    font-size: 30px;
+  }
+
+  .story__date {
+    font-size: 16px;
+  }
+
+  .story__text {
+    font-size: 18px;
+    padding-bottom: 40px;
+  }
+  .story__button {
+    height: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .story__container {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .story__photo-container {
+    width: 44.21%;
+    padding-bottom: 44%;
+    flex-shrink: 0;
+    position: relative;
+    object-fit: contain;
+  }
+
+  .story__photo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .story__brief-container {
+    width: 51.65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+  }
+
+  .content__container {
+    margin: 0 auto;
+    width: 59%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 130px 0 160px 0;
+  }
+
+  .story__title {
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 1.263;
+  }
+
+  .story__title span {
+    font-weight: 500;
+  }
+
+  .story__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .story__date {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  .story__text {
+    font-size: 22px;
+    line-height: 1.363;
+    padding-bottom: 66px;
+  }
+
+  .story__button_brief {
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .story__button {
+    width: 100%;
+    height: 85px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+  }
 }
 </style>
