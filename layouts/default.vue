@@ -1,7 +1,6 @@
 <template>
   <div>
     <Header />
-
     <nuxt />
     <Footer />
   </div>
@@ -9,13 +8,10 @@
 
 <script>
 import Header from '@/components/blocks/Header';
-import Popup from '@/components/Popup';
 import Footer from '@/components/Footer';
-
 export default {
   components: {
     Header,
-    Popup,
     Footer,
   },
 };
@@ -31,6 +27,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  background-color: #ffffff;
 }
 *,
 *:before,
