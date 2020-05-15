@@ -4,10 +4,10 @@
     <panel>
       <section class="stories-cards">
         <div class="stories-cards__container">
-          <!-- <card />
           <card />
           <card />
-          <card /> -->
+          <card />
+          <card />
         </div>
         <button-story class="stories-cards__button">Больше статей</button-story>
       </section>
@@ -45,9 +45,23 @@ export default {
   padding-bottom: 70px;
 }
 
+.stories-cards__button {
+  max-width: 100%;
+  min-height: 82px;
+  background-color: #fbfbfb;
+}
+
 @media (max-width: 1280px) {
   .container {
     padding-bottom: 90px;
+  }
+
+  .stories-cards__container {
+    padding-bottom: 60px;
+  }
+
+  .stories-cards__button {
+    min-height: 78px;
   }
 }
 
@@ -55,11 +69,26 @@ export default {
   .container {
     padding-bottom: 80px;
   }
+
+  .stories-cards__button {
+    min-height: 50px;
+  }
+
+  .stories-cards__container {
+    grid-gap: 30px;
+    padding-bottom: 46px;
+  }
 }
 
 @media (max-width: 800px) {
   .container {
     padding: 80px 0;
+  }
+
+  .stories-cards__container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding-bottom: 40px;
   }
 }
 
