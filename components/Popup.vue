@@ -1,23 +1,18 @@
 <template>
-  <overlay>
-    <div class="popup">
-      <button class="button__close" @click="popupClose">
-        <div class="img_close"></div>
-      </button>
-      <slot></slot>
-    </div>
-  </overlay>
+  <div class="popup">
+    <button class="button__close" @click="popupClose">
+      <div class="img_close"></div>
+    </button>
+    <slot></slot>
+  </div>
 </template>
 
 <script>
 import ButtonForm from '@/components/UI/ButtonForm';
-import Overlay from '@/components/UI/Overlay';
-import FormQuiz from '@/components/UI/FormQuiz';
+
 export default {
   components: {
     'button-block': ButtonForm,
-    overlay: Overlay,
-    'form-quiz': FormQuiz,
   },
   methods: {
     popupClose() {
@@ -34,18 +29,20 @@ export default {
 
 <style scoped>
 .popup {
+  top: 20%;
+  left: 30%;
   width: 920px;
   height: 600px;
   display: block;
   background-color: #ffffff;
-  position: absolute;
+  position: fixed;
   z-index: 2;
   padding: 40px;
 }
 
 .button__close {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   background-color: #fff;
   margin: 0px;
   padding: 0px;

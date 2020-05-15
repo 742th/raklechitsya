@@ -65,6 +65,7 @@ export default {
 </script>
 
 <style scoped>
+
 .story__title-container {
   display: grid;
   grid-template-columns: 44.21% 4.29% 51.5%;
@@ -188,6 +189,7 @@ export default {
     height: 70px;
   }
 }
+
 @media (max-width: 800px) {
   .story__title-container {
     grid-template-columns: 1fr;

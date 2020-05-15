@@ -47,7 +47,6 @@ export default {
   background-color: #ffffff;
   color: #000000;
 }
-
 .open_theme_grey {
   background-color: #f7f7f7;
   color: #000000;
@@ -58,5 +57,10 @@ export default {
 }
 .unactive-white {
   color: #c9c9c9;
+}
+
+.open_theme_light-grey {
+  background-color: #fbfbfb;
+  color: #121212;
 }
 </style>

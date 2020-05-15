@@ -7,7 +7,7 @@
       </h2>
       <nav class="header__menu">
         <nuxt-link to="/" class="header__menu-link">Главная</nuxt-link>
-        <nuxt-link to="stories" class="header__menu-link">Истроии</nuxt-link>
+        <nuxt-link to="/stories" class="header__menu-link">Истории</nuxt-link>
         <button-block
           @btnClick="openPopup"
           :theme="'white'"
