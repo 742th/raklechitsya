@@ -1,18 +1,27 @@
+// TODO: почему хедер лежит в /components/blocks, а футер просто в /components?
 <template>
   <div>
-    <Header />
+    <mobile-menu v-if="isMobileMenuOpened" class="main-burger-menu" />
+    <main-header />
     <nuxt />
-    <Footer />
+    <main-footer />
   </div>
 </template>
 
 <script>
+import MobileMenu from '@/components/blocks/MobileMenu';
 import Header from '@/components/blocks/Header';
 import Footer from '@/components/Footer';
 export default {
+  computed: {
+    isMobileMenuOpened() {
+      return this.$store.getters['mobile-menu/getMobileMenuState'];
+    },
+  },
   components: {
-    Header,
-    Footer,
+    'mobile-menu': MobileMenu,
+    'main-header': Header,
+    'main-footer': Footer,
   },
 };
 </script>
@@ -34,5 +43,10 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.main-burger-menu {
+  align-items: center;
+  border-bottom: 1px solid #efefef;
 }
 </style>
