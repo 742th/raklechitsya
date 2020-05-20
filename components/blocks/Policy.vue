@@ -1,8 +1,9 @@
-// todo: // прикрутить футер // pixelperfect // адаптив
+// todo: // прикрутить футер // pixelperfect // + адаптив(нужно будет хорошо
+проверить)
 
 <template>
-  <section class="policy">
-    <panel>
+  <panel>
+    <section class="policy">
       <h1 class="border-title policy__title">
         Политика проекта в отношении обработки персональных данных
       </h1>
@@ -256,8 +257,8 @@
           </ol>
         </li>
       </ol>
-    </panel>
-  </section>
+    </section>
+  </panel>
 </template>
 
 <script>
@@ -272,19 +273,20 @@ export default {
 <style scoped>
 .policy {
   margin-top: 100px;
+  max-width: 56%;
 }
 
 .panel {
   padding: 0;
   flex-direction: column;
   align-items: center;
-  max-width: 56%;
 }
 
 .border-title {
   border-top: 1px solid #efefef;
   border-bottom: 1px solid #efefef;
   padding: 30px 0;
+  margin-bottom: 100px;
 }
 
 .policy__title {
@@ -292,7 +294,6 @@ export default {
   font-weight: 500;
   font-size: 38px;
   line-height: 48px;
-  margin-bottom: 100px;
 }
 
 .points-list {
@@ -311,6 +312,10 @@ export default {
   margin-left: -25px;
 }
 
+.subpoints-list:first-child {
+  margin-top: 40px;
+}
+
 .subpoints-list {
   font-weight: normal;
   padding: 0;
@@ -318,5 +323,110 @@ export default {
 
 .subpoints-list__subpoint {
   margin-top: 30px;
+  padding-left: 16px;
+}
+
+@media (max-width: 1280px) {
+  .policy {
+    margin-top: 90px;
+  }
+
+  .border-title {
+    margin-bottom: 90px;
+  }
+
+  .policy__title {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .points-list__point {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .policy {
+    margin-top: 80px;
+    max-width: 64%;
+  }
+
+  .border-title {
+    margin-bottom: 80px;
+  }
+
+  .policy__title {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .points-list {
+    padding-left: 28px;
+  }
+
+  .points-list__point {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+@media (max-width: 798px) {
+  .policy {
+    margin-top: 80px;
+    max-width: 84%;
+  }
+
+  .points-list {
+    padding-left: 28px;
+  }
+
+  .points-list__point {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 440px) {
+  .policy {
+    margin-top: 50px;
+    max-width: 94%;
+  }
+
+  .border-title {
+    padding: 20px 0;
+    margin-bottom: 40px;
+  }
+
+  .policy__title {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .points-list {
+    padding-left: 20px;
+  }
+
+  .points-list__description {
+    margin-top: 20px;
+    margin-left: -15px;
+  }
+
+  .subpoints-list:first-child {
+    margin-top: 20px;
+  }
+
+  .subpoints-list {
+    margin-top: 20px;
+  }
+
+  .subpoints-list__subpoint {
+    margin-top: 20px;
+    padding-left: 12px;
+  }
+
+  .points-list__point {
+    font-size: 13px;
+    line-height: 16px;
+  }
 }
 </style>
