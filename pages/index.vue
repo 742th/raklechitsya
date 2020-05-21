@@ -22,6 +22,7 @@
     <Story />
     <Statistics />
     <About />
+    <Overlay v-if="popupShow" @layClick="popupClose" />
     <Popup v-if="popupShow">
       <Quiz />
     </Popup>
@@ -40,7 +41,8 @@ import InstagramSection from '@/components/blocks/InstagramSection';
 import About from '@/components/blocks/About';
 import Statistics from '@/components/blocks/Statistics';
 import Popup from '@/components/Popup';
-import Quiz from '@/components/UI/FormQuiz';
+import Quiz from '@/components/FormQuiz';
+import Overlay from '@/components/UI/Overlay';
 
 export default {
   components: {
@@ -55,10 +57,16 @@ export default {
     Statistics,
     Popup,
     Quiz,
+    Overlay,
   },
   computed: {
     popupShow() {
       return this.$store.getters['popup/getPopupQuiz'];
+    },
+  },
+  methods: {
+    popupClose() {
+      this.$store.commit('popup/togglePopup');
     },
   },
 };

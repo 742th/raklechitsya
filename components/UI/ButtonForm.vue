@@ -58,4 +58,9 @@ export default {
 .unactive-white {
   color: #c9c9c9;
 }
+
+.open_theme_light-grey {
+  background-color: #fbfbfb;
+  color: #121212;
+}
 </style>

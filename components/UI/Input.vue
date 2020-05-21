@@ -3,6 +3,8 @@
     :class="['com-input', theme]"
     :type="type"
     :placeholder="placeholder"
+    v-model="content"
+    @input="handle"
   />
 </template>
 
@@ -12,6 +14,20 @@ export default {
     type: String,
     placeholder: String,
     theme: String,
+    value: {
+      type: String,
+      default: '',
+    },
+  },
+  data() {
+    return {
+      content: this.value,
+    };
+  },
+  methods: {
+    handle(e) {
+      this.$emit('input', this.content);
+    },
   },
 };
 </script>
