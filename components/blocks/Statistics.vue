@@ -3,21 +3,21 @@
     <Title>Статистика по онкозаболеваниям</Title>
     <div class="statistics-box">
       <div v-for="card in statisticCard" :key="card.id" class="statistic__card">
-        <p class="statistic__info">{{ card.info }}</p>
+        <p class="statistic__info">{{ card.description }}</p>
         <div>
           <!-- здесь должна быть логика, что если есть card.value то выводит первый график, если нет такого значения, то второй -->
           <Graph
-            v-if="card.value"
-            :value="card.value"
+            v-if="!card.oldValue"
+            :value="card.currentValue"
             :maxValue="card.maxValue"
           />
           <DoubleGraph
-            v-if="card.firstValue"
-            :firstValue="card.firstValue"
-            :secondValue="card.secondValue"
+            v-if="card.oldValue"
+            :firstValue="card.oldValue"
+            :secondValue="card.currentValue"
           />
-          <p class="statistic__numbers">{{ card.numbers }}</p>
-          <p class="statistic__resource">{{ card.resourse }}</p>
+          <p class="statistic__numbers">{{ card.summary }}</p>
+          <p class="statistic__resource">{{ card.source }}</p>
         </div>
       </div>
     </div>
@@ -42,38 +42,42 @@ export default {
       statisticCard: [
         {
           id: '0',
-          info:
+          description:
             'Каждый 3-й в стране уверен, что рак неизлечим. А это примерно 48 918 000 человек.',
-          numbers: '1 из 3',
-          resourse: 'Левада-Центр 2018',
-          value: 1,
+          summary: '1 из 3',
+          source: 'Левада-Центр 2018',
+          oldValue: null,
+          currentValue: 1,
           maxValue: 4,
         },
         {
           id: '1',
-          info: '2,6% Россиян имеют онкозаболевания.',
-          numbers: '3 700 000',
-          resourse: 'Росстат 2018',
-          value: 2.6,
+          description: '2,6% Россиян имеют онкозаболевания.',
+          summary: '3 700 000',
+          source: 'Росстат 2018',
+          oldValue: null,
+          currentValue: 2.6,
           maxValue: 100,
         },
         {
           id: '2',
-          info:
+          description:
             'На 28% выросла доля выявления заболеваний на ранней стадии за 10 лет.',
-          numbers: '↑28%',
-          resourse: 'МНИОИ Герцена 2018',
-          firstValue: 61,
-          secondValue: 89,
+          summary: '↑28%',
+          source: 'МНИОИ Герцена 2018',
+          oldValue: 61,
+          currentValue: 89,
+          maxValue: 100,
         },
         {
           id: '3',
-          info:
+          description:
             'На 25% снизилась смертность в течение первого года после постановки диагноза.',
-          numbers: '↓25%',
-          resourse: 'МНИОИ Герцена 2018',
-          firstValue: 73,
-          secondValue: 48,
+          summary: '↓25%',
+          source: 'МНИОИ Герцена 2018',
+          oldValue: 73,
+          currentValue: 48,
+          maxValue: 100,
         },
       ],
     };
