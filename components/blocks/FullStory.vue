@@ -15,7 +15,7 @@
         </h1>
         <div class="story__footer">
           <button-share class="story__button_brief" :theme="'white'"
-            >Поделитесь ↗</button-share
+            >Поделитесь &#8599;</button-share
           >
           <p class="story__date">20 апреля 2018</p>
         </div>
@@ -46,7 +46,7 @@
           soluta ipsam mollitia.
         </p>
         <button-share class="story__button" :theme="'white'">
-          Поделитесь этой статьей в своих социальных сетях ↗
+          Поделитесь этой статьей в своих социальных сетях &#8599;
         </button-share>
       </div>
     </section>
@@ -65,7 +65,6 @@ export default {
 </script>
 
 <style scoped>
-
 .story__title-container {
   display: grid;
   grid-template-columns: 44.21% 4.29% 51.5%;
